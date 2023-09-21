@@ -22,7 +22,7 @@ func getSourceDir(file string) string {
 	dir = filepath.Dir(dir)
 
 	s := filepath.Dir(dir)
-	if filepath.Base(s) != "eioos.com" {
+	if filepath.Base(s) != "github.com" {
 		s = dir
 	}
 	return filepath.ToSlash(s) + "/"
