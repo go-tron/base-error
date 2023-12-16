@@ -28,8 +28,8 @@ func getSourceDir(file string) string {
 	return filepath.ToSlash(s) + "/"
 }
 
-func IsSystem(err error) bool {
-	return reflect.TypeOf(err).String() == "*baseError.Error" && !err.(*Error).System
+func IsSystemError(err error) bool {
+	return reflect.TypeOf(err).String() == "*baseError.Error" && err.(*Error).System
 }
 
 type Error struct {
